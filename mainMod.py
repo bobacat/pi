@@ -69,7 +69,7 @@ def querySearchEngine(val):
                 if url:
                     imagenames.append((url, text))
             except:
-                # print topic
+                print(topic)
                 pass
 #    else:
 #        print req.status_code
