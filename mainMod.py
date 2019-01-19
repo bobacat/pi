@@ -15,6 +15,9 @@ from StringIO import StringIO
 
 from EPD_driver import EPD_driver
 
+ypos = 0
+xpos = 0
+
 
 def handler(signum, frame):
     print('SIGTERM')
