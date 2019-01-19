@@ -35,7 +35,7 @@ try:
     localtime = (now.strftime("%H:%M:%S"))
     draw = ImageDraw.Draw(Himage)
     font24 = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 24)
-    draw.text((10, 0), 'BOBA IS A BIG WEINER!!', font=font24, fill=0)
+    draw.text((10, 0), 'BOBA kitty', font=font24, fill=0)
     draw.text((0, 100), currentDate, font=font24, fill=0)
     draw.text((0, 200), localtime, font=font24, fill=0)
     epd.display(epd.getbuffer(Himage))
