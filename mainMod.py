@@ -80,7 +80,8 @@ def querySearchEngine(val):
 
 def imageToDisplay(img):
     # prepare for display
-    im = mainimg.transpose(Image.ROTATE_90)
+    # im = mainimg.transpose(Image.ROTATE_90)
+    im = mainimg.transpose()
     listim = list(im.getdata())
     # print im.format, im.size, im.mode, len(listim)
     # convert to list / bitmap
