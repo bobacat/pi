@@ -33,11 +33,9 @@ def main():
     epd = epd4in2.EPD()
     epd.init()
     # For simplicity, the arguments are explicit numerical coordinates
-    image = Image.new('1', (EPD_WIDTH, EPD_HEIGHT), 1)
     draw = ImageDraw.Draw(Himage)
     image = Image.open(choose_random_loading_image('bmp/'))
     Himage = Image.open(image)
-    epd.display(epd.getbuffer(Himage))
     time.sleep(60)  # change the image every minute
     main()
 
