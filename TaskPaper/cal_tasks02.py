@@ -31,7 +31,8 @@ todolist_items = 0
 
 def main():
 
-        displayTasks()
+epd = epd4in2.EPD()
+epd.init()
         wait = 60
         refresh_time = 1000
         start_time = time.time()+refresh_time
