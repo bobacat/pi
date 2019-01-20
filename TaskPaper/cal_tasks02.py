@@ -75,7 +75,7 @@ def displayTasks():
     # For simplicity, the arguments are explicit numerical coordinates
     image = Image.new('1', (EPD_WIDTH, EPD_HEIGHT), 1)    # 1: clear the frame
     image = Image.open('bmp/'+choose_random_loading_image())
-    epd.display_frame(epd.get_frame_buffer(image))
+    epd.display(epd.get_frame_buffer(image))
 
     response = requests.get("https://beta.todoist.com/API/v8/tasks", params={"token":TODOIST_TOKEN}).json()
     data = response
