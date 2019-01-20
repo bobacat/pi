@@ -22,7 +22,7 @@
  # LIABILITY WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  # THE SOFTWARE.
- ##
+ ###
 
 import epd7in5
 import Image
@@ -49,7 +49,7 @@ def main():
     draw = ImageDraw.Draw(image)
     image = Image.open(choose_random_loading_image('bmp/'))
     epd.display_frame(epd.get_frame_buffer(image))
-    time.sleep(60)  # change the image every minute 
+    time.sleep(60)  # change the image every minute
     main()
 
 
