@@ -30,21 +30,20 @@ todolist_items = 0
 
 
 def main():
+    epd = epd4in2.EPD()
+    epd.init()
+    wait = 60
+    refresh_time = 1000
+    start_time = time.time()+refresh_time
 
-epd = epd4in2.EPD()
-epd.init()
-        wait = 60
-        refresh_time = 1000
-        start_time = time.time()+refresh_time
-
-        while True:
-            print('restart  : current time ' + str(time.time()/60) + ' started time ' + str(start_time/60))
-            if is_todo_changed():
-                start_time=time.time()+refresh_time  # rest refresh time
-                displayTasks()
-            elif (time.time()-start_time)>0:
-                start_time=time.time()+refresh_time  # rest refresh time
-                displayTasks()
+    while True:
+        print('restart  : current time ' + str(time.time()/60) + ' started time ' + str(start_time/60))
+        if is_todo_changed():
+            start_time = time.time()+refresh_time  # rest refresh time
+            displayTasks()
+        elif (time.time()-start_time) > 0:
+            start_time = time.time()+refresh_time  # rest refresh time
+            displayTasks()
 
             time.sleep(wait)
 
