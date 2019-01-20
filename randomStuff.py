@@ -26,7 +26,7 @@ def choose_random_loading_image(path):
 
 
 def main():
-    epd = epd7in5.EPD()
+    epd = epd4in2.EPD()
     epd.init()
     # For simplicity, the arguments are explicit numerical coordinates
     draw = ImageDraw.Draw(image)
