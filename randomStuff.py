@@ -29,7 +29,7 @@ def main():
     epd = epd4in2.EPD()
     epd.init()
     # For simplicity, the arguments are explicit numerical coordinates
-    image = Image.open(choose_random_loading_image('bmp/'))
+    image = Image.open(choose_random_loading_image('images/'))
     epd.display_frame(epd.get_frame_buffer(image))
     time.sleep(60)  # change the image every minute
     main()
