@@ -42,7 +42,7 @@ def main():
     font = ImageFont.truetype('fonts/arial.ttf', 124)
     image = Image.new('1', (EPD_WIDTH, EPD_HEIGHT), 1)    # 1: clear the frame
     draw = ImageDraw.Draw(image)
-    image = Image.open('bmp/kitten.png')
+    image = Image.open('bmp/leto.png')
     draw.text((200, 10), 'e-Paper demo', font = font, fill = 255)
     epd.display_frame(epd.get_frame_buffer(image))
 
