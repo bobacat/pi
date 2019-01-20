@@ -38,3 +38,7 @@ try:
 
         if __name__ == '__main__':
             main()
+
+    except:
+        print 'traceback.format_exc():\n%s' % traceback.format_exc()
+        exit()
