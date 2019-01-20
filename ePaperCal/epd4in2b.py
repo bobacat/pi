@@ -29,8 +29,8 @@ import Image
 import RPi.GPIO as GPIO
 
 # Display resolution
-EPD_WIDTH       = 640
-EPD_HEIGHT      = 384
+EPD_WIDTH       = 400
+EPD_HEIGHT      = 300
 
 # EPD7IN5 commands
 PANEL_SETTING                               = 0x00
@@ -142,7 +142,7 @@ class EPD:
         self.digital_write(self.reset_pin, GPIO.LOW)         # module reset
         self.delay_ms(200)
         self.digital_write(self.reset_pin, GPIO.HIGH)
-        self.delay_ms(200)    
+        self.delay_ms(200)
 
     def get_frame_buffer(self, image):
         buf = [0xFF] * (self.width * self.height / 8)
@@ -162,26 +162,23 @@ class EPD:
                     buf[(x + y * self.width) / 8] &= ~(0x80 >> (x % 8))
         return buf
 
-    def display_frame(self, frame_buffer_black, frame_buffer_red):
+    def display_frame(self, frame_buffer_black):
         self.send_command(DATA_START_TRANSMISSION_1)
         for i in range(0, self.width / 8 * self.height):
             temp1 = frame_buffer_black[i]
-            temp2 = frame_buffer_red[i]
             j = 0
             while (j < 8):
                 if ((temp2 & 0x80) == 0x00):
-                    temp3 = 0x04                #red
                 elif ((temp1 & 0x80) == 0x00):
                     temp3 = 0x00                #black
                 else:
                     temp3 = 0x03                #white
-					
+
                 temp3 = (temp3 << 4) & 0xFF
                 temp1 = (temp1 << 1) & 0xFF
                 temp2 = (temp2 << 1) & 0xFF
                 j += 1
                 if((temp2 & 0x80) == 0x00):
-                    temp3 |= 0x04              #red
                 elif ((temp1 & 0x80) == 0x00):
                     temp3 |= 0x00              #black
                 else:
@@ -201,4 +198,3 @@ class EPD:
         self.send_data(0xa5)
 
 ### END OF FILE ###
-
