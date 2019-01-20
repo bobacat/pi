@@ -95,13 +95,13 @@ def displayTasks():
 
     font_weather_icons = ImageFont.truetype('fonts/weathericons-regular-webfont.ttf', 35)
     font_weather_degree = ImageFont.truetype('fonts/Roboto-Light.ttf', 25)
-    font_tasks_list_title = ImageFont.truetype('fonts/Roboto-Light.ttf',30)
-    font_tasks_list = ImageFont.truetype('fonts/tahoma.ttf',12)
-    font_tasks_due_date = ImageFont.truetype('fonts/tahoma.ttf',9)
+    font_tasks_list_title = ImageFont.truetype('fonts/Roboto-Light.ttf', 30)
+    font_tasks_list = ImageFont.truetype('fonts/tahoma.ttf', 12)
+    font_tasks_due_date = ImageFont.truetype('fonts/tahoma.ttf', 9)
     salahFont = ImageFont.truetype('fonts/arial.ttf', 13)
     salahFont2 = ImageFont.truetype('fonts/arial.ttf', 14)
 
-    font_icons = ImageFont.truetype('fonts/Byom-Icons-Trial.ttf', 15)
+    # font_icons = ImageFont.truetype('fonts/tahoma.ttf', 15)
 
 # Calendar Strings
     cal_day_str = time.strftime("%A")
