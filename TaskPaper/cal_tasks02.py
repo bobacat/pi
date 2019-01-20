@@ -30,8 +30,7 @@ todolist_items = 0
 
 
 def main():
-    epd = epd4in2.EPD()
-    epd.init()
+    displayTasks()
     wait = 60
     refresh_time = 1000
     start_time = time.time()+refresh_time
@@ -88,8 +87,8 @@ def displayTasks():
     # For simplicity, the arguments are explicit numerical coordinates
     image = Image.new('1', (EPD_WIDTH, EPD_HEIGHT), 1)    # 1: clear the frame
     draw = ImageDraw.Draw(image)
-    font = ImageFont.truetype('/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf', 20)
-    font_cal = ImageFont.truetype('/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf', 16)
+    font = ImageFont.truetype('fonts/arial.ttf', 20)
+    font_cal = ImageFont.truetype('fonts/arial.ttf', 16)
     font_day = ImageFont.truetype('fonts/Roboto-Black.ttf', 110)
     font_day_str = ImageFont.truetype('fonts/Roboto-Light.ttf', 35)
     font_month_str = ImageFont.truetype('fonts/Roboto-Light.ttf', 25)
@@ -100,7 +99,7 @@ def displayTasks():
     font_tasks_list = ImageFont.truetype('fonts/tahoma.ttf',12)
     font_tasks_due_date = ImageFont.truetype('fonts/tahoma.ttf',9)
     salahFont = ImageFont.truetype('fonts/arial.ttf', 13)
-    salahFont2 = ImageFont.truetype('/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf', 14)
+    salahFont2 = ImageFont.truetype('fonts/arial.ttf', 14)
 
     font_icons = ImageFont.truetype('fonts/Byom-Icons-Trial.ttf', 15)
 
