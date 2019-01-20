@@ -25,8 +25,16 @@ def choose_random_loading_image(path):
     return path+images[loading_image]
 
 
-image = Image.open(choose_random_loading_image('bmp/'))
+def main():
+    epd = epd7in5.EPD()
+    epd.init()
+    # For simplicity, the arguments are explicit numerical coordinates
+    draw = ImageDraw.Draw(image)
+    image = Image.open(choose_random_loading_image('bmp/'))
+    epd.display_frame(epd.get_frame_buffer(image))
+    time.sleep(60)  # change the image every minute
+    main()
 
-print("read bmp file")
-Himage = image
-epd.display(epd.getbuffer(Himage))
+
+if __name__ == '__main__':
+    main()
