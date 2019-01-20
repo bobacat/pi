@@ -31,7 +31,7 @@ def main():
     # For simplicity, the arguments are explicit numerical coordinates
     image = Image.open(choose_random_loading_image('images/'))
     epd.display(epd.get_frame_buffer(image))
-    time.sleep(60)  # change the image every minute
+    time.sleep(10)  # change the image every minute
     main()
 
 
