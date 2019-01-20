@@ -51,9 +51,9 @@ def main():
 def is_todo_changed():
     response = requests.get("https://beta.todoist.com/API/v8/tasks", params={"token":TODOIST_TOKEN}).json()
     global todolist_items
-    get_todolist_items= len (response)
+    get_todolist_items = len(response)
 
-    if(get_todolist_items!=todolist_items):
+    if(get_todolist_items != todolist_items):
         print('items chnaged')
         return True
 
