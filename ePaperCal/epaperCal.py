@@ -1,7 +1,7 @@
 # The Signal Path - DataPad ePaper Display
 # Shahriar Shahramian / November 2018
 
-import epd4in2b
+import epd4in2
 import Image
 import ImageDraw
 import ImageFont
