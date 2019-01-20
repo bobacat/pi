@@ -100,8 +100,8 @@ class EPD:
         self.reset_pin = epdconfig.RST_PIN
         self.dc_pin = epdconfig.DC_PIN
         self.busy_pin = epdconfig.BUSY_PIN
-        self.width = EPD_WIDTH
-        self.height = EPD_HEIGHT
+        self.width = 400
+        self.height = 300
 
     lut_vcom0 = [
     0x00, 0x17, 0x00, 0x00, 0x00, 0x02,
