@@ -231,16 +231,5 @@ def refresh_Screen():
             draw_red.text((x_nowshown_tasks, line_start + 3.5 + line_location), notshown_tasks,font = font_tasks_due_date, fill = 255) # Print identifier that there are tasks not shown
             break
 
-    if Debug_Mode == 1:
-        print('-= Viewing ePaper Frames... =-')
-        image_black.save("Black_Frame.png")
-        image_red.save("Red_Frame.png")
-        wand.display.display(wand.image.Image(filename = "Black_Frame.png"))
-        wand.display.display(wand.image.Image(filename = "Red_Frame.png"))
-        print('-= ...Done =-')
-    else:
-        print('-= Updating ePaper... =-')
-        epd.display_frame(epd.get_frame_buffer(image_black),epd.get_frame_buffer(image_red))
-        print('-= ...Done =-')
-if __name__ == '__main__':
+
     main()
