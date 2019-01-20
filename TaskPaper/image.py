@@ -24,25 +24,25 @@
  # THE SOFTWARE.
  ##
 
-import epd7in5
+import epd4in2
 import Image
 import ImageDraw
 import ImageFont
 #import imagedata
 
-EPD_WIDTH = 640
-EPD_HEIGHT = 384
+EPD_WIDTH = 400
+EPD_HEIGHT = 300
 
 def main():
-    epd = epd7in5.EPD()
+    epd = epd4in2.EPD()
     epd.init()
 
 
     # For simplicity, the arguments are explicit numerical coordinates
-    font = ImageFont.truetype('/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf', 124)
+    font = ImageFont.truetype('fonts/arial.ttf', 124)
     image = Image.new('1', (EPD_WIDTH, EPD_HEIGHT), 1)    # 1: clear the frame
     draw = ImageDraw.Draw(image)
-    image = Image.open('bmp/mrwhite2.bmp')
+    image = Image.open('bmp/kitten.png')
     draw.text((200, 10), 'e-Paper demo', font = font, fill = 255)
     epd.display_frame(epd.get_frame_buffer(image))
 
