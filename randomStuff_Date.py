@@ -75,10 +75,6 @@ try:
     month_cal = month_cal.split("\n", 1)[1]
     update_moment = time.strftime("%I") + ':' + time.strftime("%M") + ' ' + time.strftime("%p")
 
-    w_day_str = font_day_str.getsize(day_str)
-    h_day_str = font_day_str.getsize(day_str)
-    x_day_str = (cal_width / 2) - (w_day_str / 2)
-
     # This section is to center the calendar text in the middle
     w_day_str, h_day_str = font_day_str.getsize(day_str)
     x_day_str = (cal_width / 2) - (w_day_str / 2)
