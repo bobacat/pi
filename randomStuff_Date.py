@@ -69,11 +69,6 @@ try:
 
     calendar.setfirstweekday(0)  # Monday is the first day of the week
 
-    path = 'images/'
-    files = os.listdir(path)
-    index = random.randrange(0, len(files))
-    draw = ImageDraw.Draw(files[index])
-
     # Calendar strings to be displayed
 
     cal_width = 100
