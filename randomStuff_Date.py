@@ -28,8 +28,6 @@ import epd4in2
 import traceback
 
 
-    global font24 = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 24)
-
 epd = epd4in2.EPD()
 epd.init()
 epd.Clear(0xFF)
