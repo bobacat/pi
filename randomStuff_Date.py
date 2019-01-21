@@ -37,10 +37,6 @@ import os
 import random
 
 
-epd = epd4in2.EPD()
-epd.init()
-epd.Clear(0xFF)
-
 try:
     epd = epd4in2.EPD()
     epd.init()
