@@ -27,6 +27,10 @@ from EPD_driver import EPD_driver
 import epd4in2
 import traceback
 
+global cal_width = 240
+global line_start = 48
+global font24 = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 24)
+
 epd = epd4in2.EPD()
 epd.init()
 epd.Clear(0xFF)
@@ -71,14 +75,14 @@ try:
     x_day_num = (cal_width / 2) - (w_day_num / 2)
 
     # The settings for the month string in the middle
-    w_month_str,h_month_str = font_month_str.getsize(month_str)
+    w_month_str, h_month_str = font24.getsize(month_str)
     x_month_str = (cal_width / 2) - (w_month_str / 2)
 
-    draw.rectangle((0,0,240, 384), fill = 0) # Calender area rectangle
-    draw.text((20, 190),month_cal , font = font24, fill = 255) # Month calender text
-    draw.text((x_day_str,10),day_str, font = font24, fill = 255) # Day string calender text
-    draw.text((x_day_num,35),day_number, font = font24, fill = 255) # Day number string text
-    draw.text((x_month_str,150),month_str, font = font24, fill = 255) # Month string text
+    draw.rectangle((0, 0, 240, 384), fill=0)  # Calender area rectangle
+    draw.text((20, 190),month_cal , font=font24, fill = 255)  # Month calender text
+    draw.text((x_day_str,10),day_str, font=font24, fill = 255)  # Day string calender text
+    draw.text((x_day_num,35),day_number, font=font24, fill = 255)  # Day number string text
+    draw.text((x_month_str,150),month_str, font=font24, fill = 255)  # Month string text
 
     epd.display(epd.getbuffer(Himage))
     time.sleep(2)
