@@ -77,12 +77,12 @@ try:
 
     w_day_str = font_day_str.getsize(day_str)
     h_day_str = font_day_str.getsize(day_str)
-    x_day_str = (cal_width / 2) - (w_day_str / 2)
+    x_day_str = (cal_width / 2) - (w_day_str / 2) + 20
 
     # The settings for the Calenday today number in the middle
     w_day_num = font_day.getsize(day_number)
     h_day_num = font_day.getsize(day_number)
-    x_day_num = (cal_width / 2) - (w_day_num / 2)
+    x_day_num = (cal_width / 2) - (w_day_num / 2) + 20
 
     # The settings for the month string in the middle
     w_month_str, h_month_str = font_day.getsize(month_str)
@@ -90,8 +90,8 @@ try:
 
     draw.rectangle((0, 0, 240, 384), fill=0)  # Calender area rectangle
     draw.text((20, 190),month_cal , font=font_cal, fill = 255)  # Month calender text
-    draw.text((x_day_str + 20,10),day_str, font=font_day_str, fill = 255)  # Day string calender text
-    draw.text((x_day_num + 20,35),day_number, font=font_day, fill = 255)  # Day number string text
+    draw.text((x_day_str,10),day_str, font=font_day_str, fill = 255)  # Day string calender text
+    draw.text((x_day_num,35),day_number, font=font_day, fill = 255)  # Day number string text
     draw.text((x_month_str,150),month_str, font=font_month_str, fill = 255)  # Month string text
 
     epd.display(epd.getbuffer(Himage))
