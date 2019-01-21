@@ -44,10 +44,10 @@ try:
     Limage = Image.new('1', (epd4in2.EPD_HEIGHT, epd4in2.EPD_WIDTH), 255)
 
     font_cal = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 12)
-    font_day = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 60)
+    font_day = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 90)
     font_weather = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 20)
     font_day_str = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 12)
-    font_month_str = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 12)
+    font_month_str = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 18)
     font_weather_icons = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 40)
     font_tasks_list_title = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 10)
     font_tasks_list = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 12)
