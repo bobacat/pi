@@ -43,6 +43,18 @@ try:
     # Drawing on the Vertical image
     Limage = Image.new('1', (epd4in2.EPD_HEIGHT, epd4in2.EPD_WIDTH), 255)
 
+    font_cal = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 16)
+    font_day = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 110)
+    font_weather = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 20)
+    font_day_str = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 35)
+    font_month_str = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 25)
+    font_weather_icons = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 45)
+    font_tasks_list_title = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 30)
+    font_tasks_list = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 12)
+    font_tasks_due_date = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 11)
+    font_tasks_priority = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 9)
+    font_update_moment = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 9)
+
     # Horizontal
     print("Drawing")
     now = datetime.datetime.now()
@@ -57,6 +69,7 @@ try:
     calendar.setfirstweekday(0) # Monday is the first day of the week
 
     # Calendar strings to be displayed
+
     cal_width = 240
     line_start = 48
     day_str = time.strftime("%A")
