@@ -104,12 +104,12 @@ try:
 
     Himage2 = Image.new('1', (50, 10), color=0)
     bmp = Image.open('100x100.bmp')
-    Himage2.paste(bmp, (50,10))
-    draw.rectangle((10, 150, 60, 200), fill = 0)
+    Himage2.paste(bmp, (50, 10))
+
     epd.display(epd.getbuffer(Himage2))
 
 
-    epd.display(epd.getbuffer(Himage))
+    # epd.display(epd.getbuffer(Himage))
     time.sleep(2)
     epd.sleep()
 
