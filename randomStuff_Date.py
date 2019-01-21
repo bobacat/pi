@@ -98,6 +98,30 @@ try:
     draw.text((x_day_num, 210),day_number, font=font_day, fill = 255)  # Day number string text
     draw.text((x_month_str, 270),month_str, font=font_month_str, fill = 255)  # Month string text
 
+    epd = epd4in2.EPD()
+    epd.init()
+    epd.Clear(0xFF)
+
+    Himage = Image.new('1', (epd4in2.EPD_WIDTH, epd4in2.EPD_HEIGHT), 255)
+
+    def choose_random_loading_image(path):
+        images = os.listdir(path)
+        loading_image = random.randint(0, len(images)-1)
+        return path+images[loading_image]
+
+    def main():
+        epd = epd4in2.EPD()
+        epd.init()
+        # For simplicity, the arguments are explicit numerical coordinates
+        image = Image.open(choose_random_loading_image('images/'))
+        epd.display(epd.get_frame_buffer(image))
+        time.sleep(10)  # change the image every minute
+        main()
+
+
+    if __name__ == '__main__':
+        main()
+
 
 
     epd.display(epd.getbuffer(Himage))
