@@ -27,9 +27,9 @@ from EPD_driver import EPD_driver
 import epd4in2
 import traceback
 
-global cal_width = 240
-global line_start = 48
-global font24 = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 24)
+    global cal_width; cal_width = 240
+    global line_start; line_start = 48
+    global font24 = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 24)
 
 epd = epd4in2.EPD()
 epd.init()
