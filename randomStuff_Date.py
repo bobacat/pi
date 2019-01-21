@@ -104,8 +104,8 @@ try:
     Himage2 = Image.new('1', (epd4in2.EPD_WIDTH, epd4in2.EPD_HEIGHT), 255)  # 255: clear the frame
     bmp = Image.open('100x100.bmp')
     Himage2.paste(bmp, (50,10))
-    
-    epd.display(epd.getbuffer(Himage))
+
+    #epd.display(epd.getbuffer(Himage))
     time.sleep(2)
     epd.sleep()
 
