@@ -77,12 +77,12 @@ try:
 
     w_day_str = font_day_str.getsize(day_str)
     h_day_str = font_day_str.getsize(day_str)
-    x_day_str = (cal_width / 2) - (w_day_str / 2) + 20
+    x_day_str = (cal_width / 2) - (w_day_str / 2) + (20)
 
     # The settings for the Calenday today number in the middle
     w_day_num = font_day.getsize(day_number)
     h_day_num = font_day.getsize(day_number)
-    x_day_num = (cal_width / 2) - (w_day_num / 2) + 20
+    x_day_num = (cal_width / 2) - (w_day_num / 2) + (20)
 
     # The settings for the month string in the middle
     w_month_str, h_month_str = font_day.getsize(month_str)
