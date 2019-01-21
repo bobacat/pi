@@ -100,7 +100,6 @@ try:
 
     epd = epd4in2.EPD()
     epd.init()
-    epd.Clear(0xFF)
 
     Himage = Image.new('1', (epd4in2.EPD_WIDTH, epd4in2.EPD_HEIGHT), 255)
 
