@@ -28,12 +28,12 @@ def main():
     epd = epd4in2.EPD()
     epd.init()
     # For simplicity, the arguments are explicit numerical coordinates
+    image = Image.open(choose_random_loading_image('images/'))
+    epd.display(epd.get_frame_buffer(image))
     draw = ImageDraw.Draw(Himage)
     font24 = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 24)
     draw.text((10, 0), 'BOBA', font=font24, fill=0)
     draw.text((10, 20), '2.9inch e-Paper', font=font24, fill=0)
-    image = Image.open(choose_random_loading_image('images/'))
-    epd.display(epd.get_frame_buffer(image))
     time.sleep(60)  # change the image every minute
     main()
 
