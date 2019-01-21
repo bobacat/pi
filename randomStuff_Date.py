@@ -44,12 +44,12 @@ try:
     Limage = Image.new('1', (epd4in2.EPD_HEIGHT, epd4in2.EPD_WIDTH), 255)
 
     font_cal = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 16)
-    font_day = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 110)
+    font_day = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 90)
     font_weather = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 20)
-    font_day_str = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 35)
-    font_month_str = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 25)
-    font_weather_icons = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 45)
-    font_tasks_list_title = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 30)
+    font_day_str = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 12)
+    font_month_str = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 18)
+    font_weather_icons = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 40)
+    font_tasks_list_title = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 10)
     font_tasks_list = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 12)
     font_tasks_due_date = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 11)
     font_tasks_priority = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 9)
@@ -61,33 +61,29 @@ try:
     currentDate = (now.strftime("%Y-%m-%d"))
     localtime = (now.strftime("%H:%M:%S"))
     draw = ImageDraw.Draw(Himage)
-    font24 = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 24)
-    draw.text((10, 0), 'BOBA kitty', font=font24, fill=0)
-    draw.text((0, 100), currentDate, font=font24, fill=0)
-    draw.text((0, 200), localtime, font=font24, fill=0)
 
-    calendar.setfirstweekday(0) # Monday is the first day of the week
+    calendar.setfirstweekday(0)  # Monday is the first day of the week
 
     # Calendar strings to be displayed
 
-    cal_width = 240
-    line_start = 48
+    cal_width = 100
+    line_start = 20
     day_str = time.strftime("%A")
     day_number = time.strftime("%d")
     month_str = time.strftime("%B") + ' ' + time.strftime("%Y")
     month_cal = str(calendar.month(int(time.strftime("%Y")), int(time.strftime("%m"))))
-    month_cal = month_cal.split("\n",1)[1];
+    month_cal = month_cal.split("\n", 1)[1]
     update_moment = time.strftime("%I") + ':' + time.strftime("%M") + ' ' + time.strftime("%p")
 
-    w_day_str,h_day_str = font_day_str.getsize(day_str)
+    w_day_str, h_day_str = font_day_str.getsize(day_str)
     x_day_str = (cal_width / 2) - (w_day_str / 2)
 
     # The settings for the Calenday today number in the middle
-    w_day_num,h_day_num = font_day.getsize(day_number)
+    w_day_num, h_day_num = font_day.getsize(day_number)
     x_day_num = (cal_width / 2) - (w_day_num / 2)
 
     # The settings for the month string in the middle
-    w_month_str, h_month_str = font24.getsize(month_str)
+    w_month_str, h_month_str = font_day.getsize(month_str)
     x_month_str = (cal_width / 2) - (w_month_str / 2)
 
     draw.rectangle((0, 0, 240, 384), fill=0)  # Calender area rectangle
