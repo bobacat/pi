@@ -100,6 +100,7 @@ try:
     draw.text((x_month_str, 270),month_str, font=font_month_str, fill = 255)  # Month string text
     image_black = Image.open('images/diehard07.png')
     draw_black = ImageDraw.Draw(image_black)
+    draw_black
     epd.display(epd.getbuffer(Himage))
     time.sleep(2)
     epd.sleep()
