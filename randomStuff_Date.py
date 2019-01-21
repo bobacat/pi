@@ -75,7 +75,7 @@ try:
     epd = epd4in2.EPD()
     epd.init()
     # For simplicity, the arguments are explicit numerical coordinates
-    image = Image.open(('images/') + loading_image)
+    image = Image.open(loading_image)
     epd.display(epd.get_frame_buffer(image))
 
     # Calendar strings to be displayed
