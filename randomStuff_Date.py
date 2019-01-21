@@ -113,6 +113,7 @@ try:
         # For simplicity, the arguments are explicit numerical coordinates
         image = Image.open(choose_random_loading_image('images/'))
         epd.display(epd.get_frame_buffer(image))
+        main()
 
     epd.display(epd.getbuffer(Himage))
     time.sleep(2)
