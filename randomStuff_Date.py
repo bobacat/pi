@@ -102,7 +102,7 @@ try:
     draw.text((x_day_num, 210), day_number, font=font_day, fill = 255)  # Day number string text
     draw.text((x_month_str, 270), month_str, font=font_month_str, fill = 255)  # Month string text
 
-    Himage = Image.new()
+    Himage = Image.new(1, (50, 10), color=0)
     bmp = Image.open('100x100.bmp')
     Himage2.paste(bmp, (50,10))
     draw.rectangle((10, 150, 60, 200), fill = 0)
