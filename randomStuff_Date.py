@@ -70,7 +70,7 @@ try:
     line_start = 20
     day_str = time.strftime("%A")
     day_number = time.strftime("%d")
-    month_str = time.strftime("%B") + ' ' + time.strftime("%Y")
+    month_str = time.strftime("%B")  # + ' ' + time.strftime("%Y")
     month_cal = str(calendar.month(int(time.strftime("%Y")), int(time.strftime("%m"))))
     month_cal = month_cal.split("\n", 1)[1]
     update_moment = time.strftime("%I") + ':' + time.strftime("%M") + ' ' + time.strftime("%p")
