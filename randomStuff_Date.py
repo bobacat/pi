@@ -16,7 +16,7 @@ epd = epd4in2.EPD()
 epd.init()
 epd.Clear(0xFF)
 
-Himage = Image.new('1', (epd4in2.EPD_WIDTH, epd4in2.EPD_HEIGHT), 255)
+
 
 
 def choose_random_loading_image(path):
@@ -31,6 +31,7 @@ def main():
     # For simplicity, the arguments are explicit numerical coordinates
     # image = Image.open(choose_random_loading_image('images/'))
     # epd.display(epd.get_frame_buffer(image))
+    Himage = Image.new('1', (epd4in2.EPD_WIDTH, epd4in2.EPD_HEIGHT), 255)
     draw = ImageDraw.Draw(Himage)
     font24 = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 24)
     draw.text((10, 0), 'BOBA', font=font24, fill=0)
