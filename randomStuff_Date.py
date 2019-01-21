@@ -98,7 +98,8 @@ try:
     w_month_str,h_month_str = font_month_str.getsize(month_str)
     x_month_str = 400 - (cal_width / 2) - (w_month_str / 2)
 
-    image_draw = Image.open('4in2.bmp')
+    image_black = Image.open('4in2.bmp')
+    image_draw = Image.open('image_black')
     image_draw.rectangle((0, 175, 400, 300), fill=0)  # Calender area rectangle
     image_draw.text((20, 190),month_cal , font=font_cal, fill = 255)  # Month calender text
     image_draw.text((x_day_str, 190),day_str, font=font_day_str, fill = 255)  # Day string calender text
