@@ -48,13 +48,9 @@ try:
     # Drawing on the Vertical image
     Limage = Image.new('1', (epd4in2.EPD_HEIGHT, epd4in2.EPD_WIDTH), 255)
 
+    Himage = Image.open('4in2.bmp')
+    epd.display(epd.getbuffer(Himage))
 
-def choose_random_loading_image(path):
-    images=os.listdir(path)
-    loading_image=random.randint(0,len(images)-1)
-    return path+images[loading_image]
-
-    im = Image.open(choose_random_loading_image('images/'))
     font_cal = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 12)
     font_day = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 60)
     font_weather = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 20)
