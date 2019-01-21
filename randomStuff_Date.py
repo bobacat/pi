@@ -43,7 +43,7 @@ try:
     # Drawing on the Vertical image
     Limage = Image.new('1', (epd4in2.EPD_HEIGHT, epd4in2.EPD_WIDTH), 255)
 
-    font_cal = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 16)
+    font_cal = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 10)
     font_day = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 90)
     font_weather = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 20)
     font_day_str = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 12)
