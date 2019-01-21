@@ -70,13 +70,9 @@ try:
     calendar.setfirstweekday(0)  # Monday is the first day of the week
 
     path = 'images/'
-    images = os.listdir(path)
-    loading_image = random.randint(0, len(images)-1)
-    epd = epd4in2.EPD()
-    epd.init()
-    # For simplicity, the arguments are explicit numerical coordinates
-    image = Image.open(loading_image)
-    epd.display(epd.get_frame_buffer(image))
+    files = os.listdir(path)
+    index = random.randrange(0, len(files))
+    draw = ImageDraw.Draw(files[index])
 
     # Calendar strings to be displayed
 
