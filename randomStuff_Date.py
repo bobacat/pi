@@ -49,7 +49,8 @@ try:
     # 255: clear the frame
 
     # Himage = Image.new('1', (epd4in2.EPD_WIDTH, epd4in2.EPD_HEIGHT), 255)
-    Himage = ImageDraw.Draw("kitten.png", mode=None)
+    image_black = Image.open('kitten.png')
+    Himage = ImageDraw.Draw(image_black, mode=None)
 
     # Drawing on the Vertical image
     Limage = Image.new('1', (epd4in2.EPD_HEIGHT, epd4in2.EPD_WIDTH), 255)
