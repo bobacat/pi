@@ -101,11 +101,11 @@ try:
     draw.text((x_day_str, 190),day_str, font=font_day_str, fill = 255)  # Day string calender text
     draw.text((x_day_num, 210), day_number, font=font_day, fill = 255)  # Day number string text
     draw.text((x_month_str, 270), month_str, font=font_month_str, fill = 255)  # Month string text
-    Himage2 = Image.new('1', (epd4in2.EPD_WIDTH, epd4in2.EPD_HEIGHT), 255)  # 255: clear the frame
-    bmp = Image.open('100x100.bmp')
-    Himage2.paste(bmp, (50,10))
-
-    #epd.display(epd.getbuffer(Himage))
+    image = Image.new('1', (EPD_WIDTH, EPD_HEIGHT), 1)    # 1: clear the frame
+    draw = ImageDraw.Draw(image)
+    image = Image.open('images/diehard03.png')
+    draw.text((200, 10), 'e-Paper demo', font = font_day, fill = 255)
+    epd.display(epd.getbuffer(Himage))
     time.sleep(2)
     epd.sleep()
 
