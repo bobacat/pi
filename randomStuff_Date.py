@@ -69,7 +69,7 @@ try:
 
     calendar.setfirstweekday(0)  # Monday is the first day of the week
 
-    path = '/images'
+    path = 'images/'
     images = os.listdir(path)
     loading_image = random.randint(0, len(images)-1)
     epd = epd4in2.EPD()
