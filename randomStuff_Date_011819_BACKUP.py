@@ -49,7 +49,7 @@ try:
     # 255: clear the frame
 
     # Himage = Image.new('1', (epd4in2.EPD_WIDTH, epd4in2.EPD_HEIGHT), 255)
-    Himage = Image.open('images/diehard04.png')
+    Himage = Image.open('kitten.png')
 
     # Drawing on the Vertical image
     Limage = Image.new('1', (epd4in2.EPD_HEIGHT, epd4in2.EPD_WIDTH), 255)
