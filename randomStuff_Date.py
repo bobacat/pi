@@ -48,7 +48,9 @@ try:
     # Drawing on the Horizontal image
     # 255: clear the frame
 
-    Himage = Image.new('1', (epd4in2.EPD_WIDTH, epd4in2.EPD_HEIGHT), 255)
+    # Himage = Image.new('1', (epd4in2.EPD_WIDTH, epd4in2.EPD_HEIGHT), 255)
+    Himage = ImageDraw.open(images/diehard03.png)
+
     # Drawing on the Vertical image
     Limage = Image.new('1', (epd4in2.EPD_HEIGHT, epd4in2.EPD_WIDTH), 255)
 
@@ -102,14 +104,8 @@ try:
     draw.text((x_day_num, 210), day_number, font=font_day, fill = 255)  # Day number string text
     draw.text((x_month_str, 270), month_str, font=font_month_str, fill = 255)  # Month string text
 
-    Himage2 = Image.new('1', (50, 10), color=0)
-    bmp = Image.open('100x100.bmp')
-    Himage2.paste(bmp, (50, 10))
 
-    epd.display(epd.getbuffer(Himage2))
-
-
-    # epd.display(epd.getbuffer(Himage))
+    epd.display(epd.getbuffer(Himage))
     time.sleep(2)
     epd.sleep()
 
