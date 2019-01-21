@@ -101,7 +101,6 @@ try:
     epd = epd4in2.EPD()
     epd.init()
 
-    Himage = Image.new('1', (epd4in2.EPD_WIDTH, epd4in2.EPD_HEIGHT), 255)
 
     def choose_random_loading_image(path):
         images = os.listdir(path)
