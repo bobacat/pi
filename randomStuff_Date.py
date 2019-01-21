@@ -99,6 +99,7 @@ try:
     x_month_str = 400 - (cal_width / 2) - (w_month_str / 2)
 
     image_black = Image.open('4in2.bmp')
+    draw = ImageDraw.Draw(image_black)
     draw_black = ImageDraw.Draw(image_black)
 
     draw.rectangle((0, 175, 400, 300), fill=0)  # Calender area rectangle
