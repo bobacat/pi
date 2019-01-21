@@ -81,13 +81,13 @@ try:
 
     # The settings for the Calenday today number in the middle
     w_day_num,h_day_num = font_day.getsize(day_number)
-    x_day_num = (cal_width / 2) - (w_day_num / 2)
+    x_day_num = (cal_width / 2) - (w_day_num / 2) + 20
 
     # The settings for the month string in the middle
     w_month_str,h_month_str = font_month_str.getsize(month_str)
-    x_month_str = (cal_width / 2) - (w_month_str / 2)
+    x_month_str = (cal_width / 2) - (w_month_str / 2) + 20
 
-    draw.rectangle((0, 200, 400, 300), fill=0)  # Calender area rectangle
+    draw.rectangle((0, 175, 400, 300), fill=0)  # Calender area rectangle
     draw.text((20, 190),month_cal , font=font_cal, fill = 255)  # Month calender text
     draw.text((x_day_str, 10),day_str, font=font_day_str, fill = 0)  # Day string calender text
     draw.text((x_day_num, 35),day_number, font=font_day, fill = 0)  # Day number string text
