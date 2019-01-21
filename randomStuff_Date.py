@@ -26,6 +26,15 @@ from StringIO import StringIO
 from EPD_driver import EPD_driver
 import epd4in2
 import traceback
+import epd4in2
+import time
+from PIL import Image, ImageDraw, ImageFont
+import traceback
+import Image
+import ImageDraw
+import time
+import os
+import random
 
 
 epd = epd4in2.EPD()
@@ -97,7 +106,6 @@ try:
         images = os.listdir(path)
         loading_image = random.randint(0, len(images)-1)
         return path+images[loading_image]
-
 
     def main():
         epd = epd4in2.EPD()
