@@ -80,11 +80,11 @@ try:
     x_day_str = (cal_width / 2) - (w_day_str / 2)
 
     # This section is to center the calendar text in the middle
-    w_day_str,h_day_str = font_day_str.getsize(day_str)
+    w_day_str, h_day_str = font_day_str.getsize(day_str)
     x_day_str = (cal_width / 2) - (w_day_str / 2)
 
     # The settings for the Calenday today number in the middle
-    w_day_num,h_day_num = font_day.getsize(day_number)
+    w_day_num, h_day_num = font_day.getsize(day_number)
     x_day_num = (cal_width / 2) - (w_day_num / 2)
 
     draw.rectangle((0, 0, 240, 384), fill=0)  # Calender area rectangle
