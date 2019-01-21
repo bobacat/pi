@@ -69,20 +69,13 @@ try:
 
     calendar.setfirstweekday(0)  # Monday is the first day of the week
 
-
-def choose_random_loading_image(path):
     images = os.listdir(path)
     loading_image = random.randint(0, len(images)-1)
-    return path+images[loading_image]
-
-
-def main():
     epd = epd4in2.EPD()
     epd.init()
     # For simplicity, the arguments are explicit numerical coordinates
-    image = Image.open(choose_random_loading_image('images/'))
+    image = Image.open(('images/') + loading_image)
     epd.display(epd.get_frame_buffer(image))
-    main()
 
     # Calendar strings to be displayed
 
