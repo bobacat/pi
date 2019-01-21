@@ -122,10 +122,7 @@ try:
         time.sleep(60)  # change the image every minute
         main()
 
-
- main()
-
-
+    main()
 
     epd.display(epd.getbuffer(Himage))
     time.sleep(2)
