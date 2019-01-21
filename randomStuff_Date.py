@@ -27,8 +27,7 @@ from EPD_driver import EPD_driver
 import epd4in2
 import traceback
 
-    global cal_width; cal_width = 240
-    global line_start; line_start = 48
+
     global font24 = ImageFont.truetype('amiga_forever/amiga4ever.ttf', 24)
 
 epd = epd4in2.EPD()
@@ -60,6 +59,8 @@ try:
     calendar.setfirstweekday(0) # Monday is the first day of the week
 
     # Calendar strings to be displayed
+    cal_width = 240
+    line_start = 48
     day_str = time.strftime("%A")
     day_number = time.strftime("%d")
     month_str = time.strftime("%B") + ' ' + time.strftime("%Y")
