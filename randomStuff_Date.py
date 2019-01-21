@@ -98,7 +98,7 @@ try:
     draw.text((x_day_str, 190),day_str, font=font_day_str, fill = 255)  # Day string calender text
     draw.text((x_day_num, 210),day_number, font=font_day, fill = 255)  # Day number string text
     draw.text((x_month_str, 270),month_str, font=font_month_str, fill = 255)  # Month string text
-    epd.display_frame(epd.get_frame_buffer(im))
+    epd.display_frame(epd.get_frame_buffer('images/diehard07.png'))
     epd.display(epd.getbuffer(Himage))
     time.sleep(2)
     epd.sleep()
