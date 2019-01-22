@@ -118,7 +118,7 @@ def main():
         except:
             print('traceback.format_exc():\n%s' % traceback.format_exc())
             exit()
-        time.sleep(1800)  # change the image every 30 min
+        time.sleep(600)  # change the image every 10 min
         main()
 
 
