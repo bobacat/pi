@@ -112,6 +112,9 @@ def main():
         time.sleep(2)
         epd.sleep()
 
+    except:
+        print('traceback.format_exc():\n%s' % traceback.format_exc())
+
         time.sleep(60)
 
 main()
