@@ -118,7 +118,7 @@ def main():
 
         time.sleep(10)
 
-        main()
+    main()
 
 
 # mainimg is used as screen buffer, all image composing/drawing is done in PI$
