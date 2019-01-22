@@ -46,7 +46,12 @@ try:
     # 255: clear the frame
 
     # Himage = Image.new('1', (epd4in2.EPD_WIDTH, epd4in2.EPD_HEIGHT), 255)
-    Himage = Image.open('images/diehard04b.png')
+
+    _files = os.listdir('images/')
+    number = random.randint(0, len(_files) - 1)
+    file_ = _files[number]
+
+    Himage = Image.open(file_)
 
     # Drawing on the Vertical image
     Limage = Image.new('1', (epd4in2.EPD_HEIGHT, epd4in2.EPD_WIDTH), 255)
