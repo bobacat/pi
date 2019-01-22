@@ -115,10 +115,9 @@ def main():
     except:
         print('traceback.format_exc():\n%s' % traceback.format_exc())
 
-        time.sleep(60)
+        time.sleep(10)
 
-
-main()
+        main()
 
 
 # mainimg is used as screen buffer, all image composing/drawing is done in PI$
