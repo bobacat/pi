@@ -36,9 +36,6 @@ import time
 import os
 import random
 
-epd = epd4in2.EPD()
-epd.init()
-epd.Clear(0xFF)
 
 try:
     epd = epd4in2.EPD()
@@ -88,19 +85,19 @@ try:
 
     # This section is to center the calendar text in the middle
     w_day_str,h_day_str = font_day_str.getsize(day_str)
-    x_day_str = 400 - (cal_width / 2) - (w_day_str / 2)
+    x_day_str = 450 - (cal_width / 2) - (w_day_str / 2)
 
     # The settings for the Calenday today number in the middle
     w_day_num,h_day_num = font_day.getsize(day_number)
-    x_day_num = 400 - (cal_width / 2) - (w_day_num / 2)
+    x_day_num = 450 - (cal_width / 2) - (w_day_num / 2)
 
     # The settings for the month string in the middle
     w_month_str,h_month_str = font_month_str.getsize(month_str)
-    x_month_str = 400 - (cal_width / 2) - (w_month_str / 2)
+    x_month_str = 450 - (cal_width / 2) - (w_month_str / 2)
 
     draw.rectangle((0, 175, 400, 300), fill=(255, 255, 255, 255))  # Calender area rectangle
     draw.text((20, 190), month_cal, font=font_cal, fill = 255)  # Month calender text
-    draw.text((x_day_str, 190),day_str, font=font_day_str, fill = 255)  # Day string calender text
+    draw.text((x_day_str, 190),day_str, font=font_day_str, fill = 0, 0, 0, 255)  # Day string calender text
     draw.text((x_day_num, 210), day_number, font=font_day, fill = 255)  # Day number string text
     draw.text((x_month_str, 270), month_str, font=font_month_str, fill = 255)  # Month string text
 
