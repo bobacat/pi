@@ -117,9 +117,12 @@ def main():
         main()
 
 
-    # mainimg is used as screen buffer, all image composing/drawing is done in PI$
-    # the mainimg is then copied to the display (drawing on the disp itself is no$
+# mainimg is used as screen buffer, all image composing/drawing is done in PI$
+# the mainimg is then copied to the display (drawing on the disp itself is no$
 
-    # except:
-        # print('traceback.format_exc():\n%s' % traceback.format_exc())
-        # exit()
+# except:
+# print('traceback.format_exc():\n%s' % traceback.format_exc())
+# exit()
+
+if __name__ == '__main__':
+    main()
