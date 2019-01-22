@@ -123,6 +123,5 @@ def main():
 # except:
 # print('traceback.format_exc():\n%s' % traceback.format_exc())
 # exit()
-
-if __name__ == '__main__':
-    main()
+        if __name__ == '__main__':
+        main()
