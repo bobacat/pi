@@ -111,6 +111,7 @@ def main():
         epd.display(epd.getbuffer(Himage))
         time.sleep(2)
         epd.sleep()
+        main()
 
     except:
         print('traceback.format_exc():\n%s' % traceback.format_exc())
