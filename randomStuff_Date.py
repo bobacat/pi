@@ -49,7 +49,7 @@ try:
 
     _files = os.listdir('images/')
     number = random.randint(0, len(_files) - 1)
-    file_ = _files[number]
+    file_ = 'images/' + _files[number]
 
     Himage = Image.open(file_)
 
