@@ -47,7 +47,7 @@ def main():
 
             # Himage = Image.new('1', (epd4in2.EPD_WIDTH, epd4in2.EPD_HEIGHT), 255)
 
-            _files = os.listdir('~/paperDisp/pi/randomStuff_Date.py/images')
+            _files = os.listdir('~/paperDisp/pi/images')
             number = random.randint(0, len(_files) - 1)
             file_ = 'images/' + _files[number]
 
